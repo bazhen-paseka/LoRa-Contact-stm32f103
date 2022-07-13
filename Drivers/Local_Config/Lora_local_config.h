@@ -24,8 +24,8 @@
 **************************************************************************
 */
 	#define SOFT_VERSION 	120
-//	#define MASTER			1
-	#define MASTER			0
+	#define MASTER			1
+//	#define MASTER			0
 	#define SLAVE			1
 	#define SLAVE_NUMBER	4
 /*

@@ -57,8 +57,14 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
+#define CH0_Pin GPIO_PIN_0
+#define CH0_GPIO_Port GPIOA
+#define CH0_EXTI_IRQn EXTI0_IRQn
 #define LED2_Pin GPIO_PIN_1
 #define LED2_GPIO_Port GPIOA
+#define CH2_Pin GPIO_PIN_2
+#define CH2_GPIO_Port GPIOA
+#define CH2_EXTI_IRQn EXTI2_IRQn
 #define NSS_Pin GPIO_PIN_4
 #define NSS_GPIO_Port GPIOA
 #define LED_Pin GPIO_PIN_0
@@ -67,6 +73,15 @@ void Error_Handler(void);
 #define RESET_GPIO_Port GPIOB
 #define DIO0_Pin GPIO_PIN_8
 #define DIO0_GPIO_Port GPIOA
+#define CH3_Pin GPIO_PIN_3
+#define CH3_GPIO_Port GPIOB
+#define CH3_EXTI_IRQn EXTI3_IRQn
+#define CH4_Pin GPIO_PIN_4
+#define CH4_GPIO_Port GPIOB
+#define CH4_EXTI_IRQn EXTI4_IRQn
+#define CH5_Pin GPIO_PIN_5
+#define CH5_GPIO_Port GPIOB
+#define CH5_EXTI_IRQn EXTI9_5_IRQn
 /* USER CODE BEGIN Private defines */
 
 /* USER CODE END Private defines */
