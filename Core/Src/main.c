@@ -25,6 +25,8 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
+	#include <stdio.h>
+	#include <string.h>
 	#include "SX1278.h"
 
 /* USER CODE END Includes */
@@ -36,6 +38,9 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
+
+	#define SOFT_VERSION 200
+
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -46,6 +51,19 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
+
+	SX1278_hw_t SX1278_hw;
+	SX1278_t 	SX1278;
+
+	int master;
+	int ret;
+
+	char buffer[64];
+
+	int message;
+	int message_length;
+
+	char DataChar[0xFF];
 
 /* USER CODE END PV */
 
@@ -91,6 +109,23 @@ int main(void)
   MX_SPI1_Init();
   MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
+
+	int soft_version_arr_int[3];
+	soft_version_arr_int[0] = ((SOFT_VERSION) / 100)     ;
+	soft_version_arr_int[1] = ((SOFT_VERSION) /  10) %10 ;
+	soft_version_arr_int[2] = ((SOFT_VERSION)      ) %10 ;
+
+	sprintf(DataChar,"\r\n\r\n\tLoRa over sx1278 v%d.%d.%d \r\nUART1 for debug on speed 115200 \r\n",
+			soft_version_arr_int[0] ,
+			soft_version_arr_int[1] ,
+			soft_version_arr_int[2] ) ;
+	HAL_UART_Transmit(&huart1, (uint8_t *)DataChar, strlen(DataChar), 100);
+	#define 	DATE_as_int_str 	(__DATE__)
+	#define 	TIME_as_int_str 	(__TIME__)
+	sprintf(DataChar,"Build: %s. Time: %s.\r\n" ,
+			DATE_as_int_str ,
+			TIME_as_int_str ) ;
+	HAL_UART_Transmit( &huart1, (uint8_t *)DataChar , strlen(DataChar) , 100 ) ;
 
   /* USER CODE END 2 */
 
