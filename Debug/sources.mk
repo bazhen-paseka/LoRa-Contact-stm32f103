@@ -23,5 +23,6 @@ C_DEPS :=
 SUBDIRS := \
 Core/Src \
 Core/Startup \
+Drivers/LoRa-sx1278_sm \
 Drivers/STM32F1xx_HAL_Driver/Src \
 

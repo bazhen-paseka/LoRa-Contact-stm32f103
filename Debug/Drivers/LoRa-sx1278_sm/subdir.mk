@@ -1,0 +1,27 @@
+################################################################################
+# Automatically-generated file. Do not edit!
+# Toolchain: GNU Tools for STM32 (10.3-2021.10)
+################################################################################
+
+# Add inputs and outputs from these tool invocations to the build variables 
+C_SRCS += \
+../Drivers/LoRa-sx1278_sm/SX1278.c 
+
+OBJS += \
+./Drivers/LoRa-sx1278_sm/SX1278.o 
+
+C_DEPS += \
+./Drivers/LoRa-sx1278_sm/SX1278.d 
+
+
+# Each subdirectory must supply rules for building sources it contributes
+Drivers/LoRa-sx1278_sm/%.o Drivers/LoRa-sx1278_sm/%.su: ../Drivers/LoRa-sx1278_sm/%.c Drivers/LoRa-sx1278_sm/subdir.mk
+	arm-none-eabi-gcc "$<" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I"D:/0_GitLab/LoRa/LoRa-Contact-stm32f103/Drivers/LoRa-sx1278_sm" -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" --specs=nano.specs -mfloat-abi=soft -mthumb -o "$@"
+
+clean: clean-Drivers-2f-LoRa-2d-sx1278_sm
+
+clean-Drivers-2f-LoRa-2d-sx1278_sm:
+	-$(RM) ./Drivers/LoRa-sx1278_sm/SX1278.d ./Drivers/LoRa-sx1278_sm/SX1278.o ./Drivers/LoRa-sx1278_sm/SX1278.su
+
+.PHONY: clean-Drivers-2f-LoRa-2d-sx1278_sm
+

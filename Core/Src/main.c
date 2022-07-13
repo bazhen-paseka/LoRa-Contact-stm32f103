@@ -25,6 +25,8 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
+	#include "SX1278.h"
+
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
