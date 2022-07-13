@@ -1,0 +1,3 @@
+[submodule "Drivers/LoRa-sx1278_sm"]
+	path = Drivers/LoRa-sx1278_sm
+	url = git@github.com:bazhen-paseka/LoRa-sx1278_sm.git
