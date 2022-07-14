@@ -46,11 +46,8 @@
 
 /* Private function prototypes -----------------------------------------------*/
 /* USER CODE BEGIN PFP */
-	extern uint32_t ch1_u32 ;
-	extern uint32_t ch2_u32 ;
-	extern uint32_t ch3_u32 ;
-	extern uint32_t ch4_u32 ;
-	extern uint32_t ch5_u32 ;
+	extern uint32_t ch_u32[5] ;
+
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -208,7 +205,7 @@ void SysTick_Handler(void)
 void EXTI0_IRQHandler(void)
 {
   /* USER CODE BEGIN EXTI0_IRQn 0 */
-	ch1_u32 = 1;
+	ch_u32[0] = 1;
   /* USER CODE END EXTI0_IRQn 0 */
   HAL_GPIO_EXTI_IRQHandler(CH0_Pin);
   /* USER CODE BEGIN EXTI0_IRQn 1 */
@@ -222,7 +219,7 @@ void EXTI0_IRQHandler(void)
 void EXTI2_IRQHandler(void)
 {
   /* USER CODE BEGIN EXTI2_IRQn 0 */
-	ch2_u32 = 1;
+	ch_u32[1] = 1;
   /* USER CODE END EXTI2_IRQn 0 */
   HAL_GPIO_EXTI_IRQHandler(CH2_Pin);
   /* USER CODE BEGIN EXTI2_IRQn 1 */
@@ -236,7 +233,7 @@ void EXTI2_IRQHandler(void)
 void EXTI3_IRQHandler(void)
 {
   /* USER CODE BEGIN EXTI3_IRQn 0 */
-	ch3_u32 = 1;
+	ch_u32[2] = 1;
   /* USER CODE END EXTI3_IRQn 0 */
   HAL_GPIO_EXTI_IRQHandler(CH3_Pin);
   /* USER CODE BEGIN EXTI3_IRQn 1 */
@@ -250,7 +247,7 @@ void EXTI3_IRQHandler(void)
 void EXTI4_IRQHandler(void)
 {
   /* USER CODE BEGIN EXTI4_IRQn 0 */
-	ch4_u32 = 1;
+	ch_u32[3] = 1;
   /* USER CODE END EXTI4_IRQn 0 */
   HAL_GPIO_EXTI_IRQHandler(CH4_Pin);
   /* USER CODE BEGIN EXTI4_IRQn 1 */
@@ -264,7 +261,7 @@ void EXTI4_IRQHandler(void)
 void EXTI9_5_IRQHandler(void)
 {
   /* USER CODE BEGIN EXTI9_5_IRQn 0 */
-	ch5_u32 = 1;
+	ch_u32[4] = 1;
   /* USER CODE END EXTI9_5_IRQn 0 */
   HAL_GPIO_EXTI_IRQHandler(CH5_Pin);
   /* USER CODE BEGIN EXTI9_5_IRQn 1 */
