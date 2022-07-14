@@ -26,7 +26,9 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+
 	#include "LoRa-Contact_SM.h"
+
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
