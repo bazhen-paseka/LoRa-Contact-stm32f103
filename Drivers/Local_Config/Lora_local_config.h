@@ -27,7 +27,7 @@
 //	#define MASTER			1
 	#define MASTER			0
 	#define SLAVE			1
-	#define SLAVE_NUMBER	4
+	#define SLAVE_NUMBER	1
 /*
 **************************************************************************
 *								   DATA TYPES
