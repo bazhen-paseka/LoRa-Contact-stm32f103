@@ -23,10 +23,9 @@
 *								    DEFINES                     
 **************************************************************************
 */
-	#define SOFT_VERSION 	120
-//	#define MASTER			1
-	#define MASTER			0
-	#define SLAVE			1
+	#define SOFT_VERSION 	130
+	#define MASTER			1
+	#define SLAVE_QNT		5
 	#define SLAVE_NUMBER	1
 /*
 **************************************************************************
